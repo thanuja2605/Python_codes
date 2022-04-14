@@ -1,0 +1,34 @@
+Pseudocode 
+
+Step  1 :  BEGIN.
+Step  2 : Login using user ID card.
+Step 3  : SCAN  the  required item using QR code or barcode. 
+Step 4 :  Declare S_list and B_list.
+Step 4 :  List the item selected in the display with price .
+Step 5 :  DELETE or ADD the items and update .
+Step 6 : Check the S_list and B_list.
+Step 7 :  SET count = 1
+      REPEAT while count =1
+
+       Scan();
+       Scan_list();
+     If S_list is equal to B_list then 
+          No change 
+          Exit();
+      Else if S_list greater than B_list then
+          Display the item list
+          Find ITEM required in B_list
+          display();
+          ADD_Bill():
+          Update();
+    Else if S_list smaller list B_list then
+          Display the item list
+          Find the item to be remove
+          DELETE();
+          Update():
+    End if
+    End else if
+    End else if
+Step : finalize the items and amount.
+Step :Print Bill
+Step :END

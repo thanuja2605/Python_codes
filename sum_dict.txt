@@ -1,0 +1,6 @@
+Sum of values in dictionary
+
+a_dict = {"a": 5, "b": 2, "c": 3, “d”: 7}
+values = a_dict.values()
+total = sum(values)
+print(total)

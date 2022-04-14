@@ -1,0 +1,34 @@
+Cashless supermarket 
+
+dict_scanned_items = {}
+num = int(input("enter no of items want to buy: "))
+dict_scanned_items = dict(input().split() for x in range(num))
+for keys in dict_scanned_items:
+    dict_scanned_items[keys]=int(dict_scanned_items[keys])
+print(dict_scanned_items)
+def returnSum(dict_scanned_items):
+    sum = 0
+    for i in dict_scanned_items.values():
+         sum = sum + i
+    return sum
+print("TOTAL:", returnSum(dict_scanned_items))
+choice_add = input("enter the item to be added(yes or no) : ")
+if choice_add == "yes" :
+    added_items= {}
+    n=int(input("enter no of items you want to add: "))
+    added_items = [ map(str, input().split()) for x in range(n)]
+    dict_scanned_items.update(added_items)
+    for keys in dict_scanned_items:
+        dict_scanned_items[keys]=int(dict_scanned_items[keys])
+print(dict_scanned_items)
+choice_remove = input("enter item to be removed  (yes or no) : ")
+if choice_remove == "yes" :
+    key_to_delete = input("Enter the key to delete : ")
+    if key_to_delete in dict_scanned_items :
+        del dict_scanned_items[key_to_delete]
+    else :
+        print("please enter the item in your cart:")
+print("items  purchased in cart : ")
+print(dict_scanned_items)
+print("TOTAL:", returnSum(dict_scanned_items))
+cart_total = returnSum(dict_scanned_items)
